@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="FIT4110 Lab03 - IoT Ingestion Contract Tests" tests="13" time="0.020">
+  <testsuite name="00_Health / GET /health - service is alive" id="80e0e1be-e11c-4779-b775-b6913e92da41" timestamp="2026-05-20T01:52:37.960Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Status code is 200" time="0.000" classname="00HealthGetHealthServiceIsAlive">
+      <failure type="AssertionFailure" message="expected PostmanResponse{ …(5) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 00_Health / GET /health - service is alive.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected PostmanResponse{ …(5) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected PostmanResponse{ …(5) } to have property 'code'
+   at Object.eval sandbox-script.js:1:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response has service status" time="0.000" classname="00HealthGetHealthServiceIsAlive">
+      <failure type="AssertionFailure" message="&quot;undefined&quot; is not valid JSON">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 00_Health / GET /health - service is alive.]]>
+        <![CDATA[Test description: Response has service status.]]>
+        <![CDATA[Error message: "undefined" is not valid JSON.]]>
+        <![CDATA[Stacktrace: JSONError: "undefined" is not valid JSON
+   at Object.eval sandbox-script.js:2:1).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="01_Functional / POST /readings - happy path creates reading" id="20b76bf4-aa2d-41e0-b003-880d71d1ccaf" timestamp="2026-05-20T01:52:37.960Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Status code is 201" time="0.000" classname="01FunctionalPostReadingsHappyPathCreatesReading">
+      <failure type="AssertionFailure" message="expected PostmanResponse{ …(5) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 01_Functional / POST /readings - happy path creates reading.]]>
+        <![CDATA[Test description: Status code is 201.]]>
+        <![CDATA[Error message: expected PostmanResponse{ …(5) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected PostmanResponse{ …(5) } to have property 'code'
+   at Object.eval sandbox-script.js:1:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response has created reading fields" time="0.000" classname="01FunctionalPostReadingsHappyPathCreatesReading">
+      <failure type="AssertionFailure" message="&quot;undefined&quot; is not valid JSON">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 01_Functional / POST /readings - happy path creates reading.]]>
+        <![CDATA[Test description: Response has created reading fields.]]>
+        <![CDATA[Error message: "undefined" is not valid JSON.]]>
+        <![CDATA[Stacktrace: JSONError: "undefined" is not valid JSON
+   at Object.eval sandbox-script.js:2:2).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="01_Functional / GET /readings/latest - list latest readings" id="ae63588d-4a61-47ce-8d60-9426dcd5d624" timestamp="2026-05-20T01:52:37.960Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Status code is 200" time="0.000" classname="01FunctionalGetReadingsLatestListLatestReadings">
+      <failure type="AssertionFailure" message="expected PostmanResponse{ …(5) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 01_Functional / GET /readings/latest - list latest readings.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected PostmanResponse{ …(5) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected PostmanResponse{ …(5) } to have property 'code'
+   at Object.eval sandbox-script.js:1:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response contains items array" time="0.000" classname="01FunctionalGetReadingsLatestListLatestReadings">
+      <failure type="AssertionFailure" message="&quot;undefined&quot; is not valid JSON">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 01_Functional / GET /readings/latest - list latest readings.]]>
+        <![CDATA[Test description: Response contains items array.]]>
+        <![CDATA[Error message: "undefined" is not valid JSON.]]>
+        <![CDATA[Stacktrace: JSONError: "undefined" is not valid JSON
+   at Object.eval sandbox-script.js:2:3).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="02_Auth / GET /readings/latest - valid token is accepted" id="ef6c50ac-f8bf-4b88-abd2-c2f06bca2e0e" timestamp="2026-05-20T01:52:37.960Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Valid token request returns success" time="0.000" classname="02AuthGetReadingsLatestValidTokenIsAccepted">
+      <failure type="AssertionFailure" message="expected undefined to deeply equal 200">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 02_Auth / GET /readings/latest - valid token is accepted.]]>
+        <![CDATA[Test description: Valid token request returns success.]]>
+        <![CDATA[Error message: expected undefined to deeply equal 200.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to deeply equal 200
+   at Object.eval sandbox-script.js:1:4).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="02_Auth / POST /readings - missing token is rejected on real service" id="0f9fc8f3-4f6f-40ef-b9f6-000d808699a1" timestamp="2026-05-20T01:52:37.960Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Missing token returns 401 or 403" time="0.000" classname="02AuthPostReadingsMissingTokenIsRejectedOnRealService">
+      <failure type="AssertionFailure" message="expected [ 401, 403 ] to include undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 02_Auth / POST /readings - missing token is rejected on real service.]]>
+        <![CDATA[Test description: Missing token returns 401 or 403.]]>
+        <![CDATA[Error message: expected [ 401, 403 ] to include undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 401, 403 ] to include undefined
+   at Object.eval sandbox-script.js:1:5).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="02_Auth / POST /readings - invalid token is rejected on real service" id="a134c160-8bab-4c33-a650-829159edcaf6" timestamp="2026-05-20T01:52:37.960Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Invalid token returns 401 or 403" time="0.000" classname="02AuthPostReadingsInvalidTokenIsRejectedOnRealService">
+      <failure type="AssertionFailure" message="expected [ 401, 403 ] to include undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 02_Auth / POST /readings - invalid token is rejected on real service.]]>
+        <![CDATA[Test description: Invalid token returns 401 or 403.]]>
+        <![CDATA[Error message: expected [ 401, 403 ] to include undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 401, 403 ] to include undefined
+   at Object.eval sandbox-script.js:1:6).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="03_Negative / POST /readings - missing required field returns validation error" id="2c8629dd-7a40-4d55-9ab9-b8cc32520442" timestamp="2026-05-20T01:52:37.960Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Invalid payload returns client error" time="0.000" classname="03NegativePostReadingsMissingRequiredFieldReturnsValidationError">
+      <failure type="AssertionFailure" message="expected [ 400, 422 ] to include undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 03_Negative / POST /readings - missing required field returns validation error.]]>
+        <![CDATA[Test description: Invalid payload returns client error.]]>
+        <![CDATA[Error message: expected [ 400, 422 ] to include undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 400, 422 ] to include undefined
+   at Object.eval sandbox-script.js:1:7).]]>
+      </failure>
+    </testcase>
+    <testcase name="Error response follows ProblemDetails shape" time="0.000" classname="03NegativePostReadingsMissingRequiredFieldReturnsValidationError">
+      <failure type="AssertionFailure" message="&quot;undefined&quot; is not valid JSON">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 03_Negative / POST /readings - missing required field returns validation error.]]>
+        <![CDATA[Test description: Error response follows ProblemDetails shape.]]>
+        <![CDATA[Error message: "undefined" is not valid JSON.]]>
+        <![CDATA[Stacktrace: JSONError: "undefined" is not valid JSON
+   at Object.eval sandbox-script.js:2:7).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="03_Negative / POST /readings - wrong enum value returns validation error" id="08f5cb5a-51a3-4205-ac6e-4e4e1667bccb" timestamp="2026-05-20T01:52:37.960Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Wrong metric enum returns client error" time="0.000" classname="03NegativePostReadingsWrongEnumValueReturnsValidationError">
+      <failure type="AssertionFailure" message="expected [ 400, 422 ] to include undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 03_Negative / POST /readings - wrong enum value returns validation error.]]>
+        <![CDATA[Test description: Wrong metric enum returns client error.]]>
+        <![CDATA[Error message: expected [ 400, 422 ] to include undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 400, 422 ] to include undefined
+   at Object.eval sandbox-script.js:1:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Error response has detail" time="0.000" classname="03NegativePostReadingsWrongEnumValueReturnsValidationError">
+      <failure type="AssertionFailure" message="&quot;undefined&quot; is not valid JSON">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 03_Negative / POST /readings - wrong enum value returns validation error.]]>
+        <![CDATA[Test description: Error response has detail.]]>
+        <![CDATA[Error message: "undefined" is not valid JSON.]]>
+        <![CDATA[Stacktrace: JSONError: "undefined" is not valid JSON
+   at Object.eval sandbox-script.js:2:8).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="04_Boundary_Reliability / POST /readings - boundary value 80 is accepted" id="2982a281-9588-4f40-a7b7-39f773a2745d" timestamp="2026-05-20T01:52:37.960Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Boundary value at max returns success" time="0.000" classname="04BoundaryReliabilityPostReadingsBoundaryValue80IsAccepted">
+      <failure type="AssertionFailure" message="expected undefined to deeply equal 201">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 04_Boundary_Reliability / POST /readings - boundary value 80 is accepted.]]>
+        <![CDATA[Test description: Boundary value at max returns success.]]>
+        <![CDATA[Error message: expected undefined to deeply equal 201.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to deeply equal 201
+   at Object.eval sandbox-script.js:1:9).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response confirms accepted reading" time="0.000" classname="04BoundaryReliabilityPostReadingsBoundaryValue80IsAccepted">
+      <failure type="AssertionFailure" message="&quot;undefined&quot; is not valid JSON">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 04_Boundary_Reliability / POST /readings - boundary value 80 is accepted.]]>
+        <![CDATA[Test description: Response confirms accepted reading.]]>
+        <![CDATA[Error message: "undefined" is not valid JSON.]]>
+        <![CDATA[Stacktrace: JSONError: "undefined" is not valid JSON
+   at Object.eval sandbox-script.js:2:9).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="04_Boundary_Reliability / POST /readings - value 81 is rejected as out of range" id="dcb37c4b-d3ee-4616-a84a-1aacd68b92a3" timestamp="2026-05-20T01:52:37.960Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Out-of-range value returns client error" time="0.000" classname="04BoundaryReliabilityPostReadingsValue81IsRejectedAsOutOfRange">
+      <failure type="AssertionFailure" message="expected [ 400, 422 ] to include undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 04_Boundary_Reliability / POST /readings - value 81 is rejected as out of range.]]>
+        <![CDATA[Test description: Out-of-range value returns client error.]]>
+        <![CDATA[Error message: expected [ 400, 422 ] to include undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 400, 422 ] to include undefined
+   at Object.eval sandbox-script.js:1:10).]]>
+      </failure>
+    </testcase>
+    <testcase name="Boundary test checks response, not request body" time="0.000" classname="04BoundaryReliabilityPostReadingsValue81IsRejectedAsOutOfRange">
+      <failure type="AssertionFailure" message="&quot;undefined&quot; is not valid JSON">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 04_Boundary_Reliability / POST /readings - value 81 is rejected as out of range.]]>
+        <![CDATA[Test description: Boundary test checks response, not request body.]]>
+        <![CDATA[Error message: "undefined" is not valid JSON.]]>
+        <![CDATA[Stacktrace: JSONError: "undefined" is not valid JSON
+   at Object.eval sandbox-script.js:2:10).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="04_Boundary_Reliability / GET /readings/latest - limit above max is rejected" id="8f7a3577-0650-490e-ac91-646bc3794593" timestamp="2026-05-20T01:52:37.960Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Limit above max returns client error" time="0.000" classname="04BoundaryReliabilityGetReadingsLatestLimitAboveMaxIsRejected">
+      <failure type="AssertionFailure" message="expected [ 400, 422 ] to include undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 04_Boundary_Reliability / GET /readings/latest - limit above max is rejected.]]>
+        <![CDATA[Test description: Limit above max returns client error.]]>
+        <![CDATA[Error message: expected [ 400, 422 ] to include undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 400, 422 ] to include undefined
+   at Object.eval sandbox-script.js:1:11).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="05_Consumer_side_Smoke / Consumer smoke - Camera/Core can call AI Vision mock" id="3278129c-d662-409d-be1c-e4658624a954" timestamp="2026-05-20T01:52:37.960Z" tests="2" failures="0" errors="0" time="0.020">
+    <testcase name="Consumer receives success from provider mock" time="0.020" classname="05ConsumerSideSmokeConsumerSmokeCameraCoreCanCallAiVisionMock"/>
+    <testcase name="Consumer can read detection fields" time="0.020" classname="05ConsumerSideSmokeConsumerSmokeCameraCoreCanCallAiVisionMock"/>
+  </testsuite>
+  <testsuite name="06_Local_only_NonFunctional / POST /readings - local response time threshold" id="69a46b97-4763-402d-b86e-f62653d92cff" timestamp="2026-05-20T01:52:37.960Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16)
+
+---
+]]></system-err>
+    <testcase name="Local service responds under 1000ms" time="0.000" classname="06LocalOnlyNonFunctionalPostReadingsLocalResponseTimeThreshold">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fit4110-lab03-iot-ingestion.]]>
+        <![CDATA[Collection name: FIT4110 Lab03 - IoT Ingestion Contract Tests.]]>
+        <![CDATA[Request name: 06_Local_only_NonFunctional / POST /readings - local response time threshold.]]>
+        <![CDATA[Test description: Local service responds under 1000ms.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:1:13).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

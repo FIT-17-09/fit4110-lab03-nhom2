@@ -17,6 +17,12 @@
 - [x] Endpoint public được khai báo rõ nếu không cần auth. (N/A for these endpoints)
 - [ ] Test thể hiện đúng expected status 401/403. (Requires running against local service to verify)
 
+## Local run status
+
+- Attempted to run Newman against the real local service (`npm run test:local`) on `http://localhost:8000`.
+- Result: Connection refused (ECONNREFUSED). See `reports/newman-local-runlog.txt` for the captured output.
+- Recommendation: Start the local service on port 8000 and re-run `npm run test:local` to validate auth and latency checks.
+
 ## 3. Negative tests
 
 - [x] Có test thiếu field bắt buộc. (Passed)

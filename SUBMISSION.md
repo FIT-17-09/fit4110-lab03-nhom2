@@ -60,6 +60,17 @@ Notes and known limitations
 Evidence
 - Newman HTML/XML reports: `reports/newman-report.html`, `reports/newman-report.xml`
 - Spectral lint: `reports/contract-lint-report.txt`
+ - Spectral lint: `reports/contract-lint-report.txt`
+
+Local run notes:
+
+- I attempted `npm run test:local` against `http://localhost:8000` to validate auth and local-only tests. The run failed with `ECONNREFUSED` (service not available). The full Newman output is saved at `reports/newman-local-runlog.txt`.
+- To complete the remaining local checks, start your service on port 8000 and re-run:
+
+```bash
+# in project root
+npm run test:local
+```
 - Test-case matrix: `templates/test-case-matrix.csv`
 - Consumer–provider handshake: `templates/consumer-provider-handshake.md`
 

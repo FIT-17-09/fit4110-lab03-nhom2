@@ -1,0 +1,91 @@
+Note: Newman run against local environment (postman/environments/FIT4110_lab03_local.postman_environment.json)
+
+(Output captured on May 20, 2026)
+
+newman
+
+FIT4110 Lab03 - IoT Ingestion Contract Tests
+
+□ 00_Health
+└ GET /health - service is alive
+  GET http://localhost:8000/health [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+  2. Status code is 200
+  3. Response has service status
+
+□ 01_Functional
+└ POST /readings - happy path creates reading
+  POST http://localhost:8000/readings [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+  5. Status code is 201
+  6. Response has created reading fields
+
+└ GET /readings/latest - list latest readings
+  GET http://localhost:8000/readings/latest?device_id=ESP32-LAB-A01&limit=5 [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+  8. Status code is 200
+  9. Response contains items array
+
+□ 02_Auth
+└ GET /readings/latest - valid token is accepted
+  GET http://localhost:8000/readings/latest [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+ 11. Valid token request returns success
+
+└ POST /readings - missing token is rejected on real service
+  POST http://localhost:8000/readings [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+ 13. Missing token returns 401 or 403
+
+└ POST /readings - invalid token is rejected on real service
+  POST http://localhost:8000/readings [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+ 15. Invalid token returns 401 or 403
+
+□ 03_Negative
+└ POST /readings - missing required field returns validation error
+  POST http://localhost:8000/readings [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+ 17. Invalid payload returns client error
+ 18. Error response follows ProblemDetails shape
+
+└ POST /readings - wrong enum value returns validation error
+  POST http://localhost:8000/readings [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+ 20. Wrong metric enum returns client error
+ 21. Error response has detail
+
+□ 04_Boundary_Reliability
+└ POST /readings - boundary value 80 is accepted
+  POST http://localhost:8000/readings [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+ 23. Boundary value at max returns success
+ 24. Response confirms accepted reading
+
+└ POST /readings - value 81 is rejected as out of range
+  POST http://localhost:8000/readings [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+ 26. Out-of-range value returns client error
+ 27. Boundary test checks response, not request body
+
+└ GET /readings/latest - limit above max is rejected
+  GET http://localhost:8000/readings/latest?limit=101 [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+ 29. Limit above max returns client error
+
+□ 05_Consumer_side_Smoke
+└ Consumer smoke - Camera/Core can call AI Vision mock
+  POST http://localhost:4011/detect [200 OK, 397B, 21ms]
+  √  Consumer receives success from provider mock
+  √  Consumer can read detection fields
+
+□ 06_Local_only_NonFunctional
+└ POST /readings - local response time threshold
+  POST http://localhost:8000/readings [errored]
+     connect ECONNREFUSED 127.0.0.1:8000
+ 31. Local service responds under 1000ms
+
+Summary:
+- iterations: 1, requests: 13 (12 failed), assertions: 21 (19 failed)
+
+Errors: connect ECONNREFUSED 127.0.0.1:8000 — local service not running or not listening on port 8000.
