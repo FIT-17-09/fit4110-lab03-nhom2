@@ -1,7 +1,8 @@
 node_modules/
 .DS_Store
 .env
-reports/*.xml
+# Allow committing generated reports for lab submission; keep .gitkeep if present
+# (reports/*.html was kept previously ignored — we now include HTML/XML reports)
 # Allow committing generated reports for lab submission; keep .gitkeep if present
 # (reports/*.html was kept previously ignored — we now include HTML/XML reports)
 prism.log
