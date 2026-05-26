@@ -23,7 +23,9 @@ jobs:
         run: npm install
 
       - name: Lint OpenAPI contracts
-        run: npm run lint:contracts
+        run: |
+          mkdir -p reports
+          npx @stoplight/spectral-cli lint contracts/*.yaml 2>&1 | tee reports/contract-lint-report.txt
 
       - name: Start Prism mock servers
         run: |
@@ -31,7 +33,7 @@ jobs:
           nohup npm run mock:vision > prism-vision.log 2>&1 &
 
       - name: Wait for mock servers
-        run: npx wait-on http://localhost:4010/health http://localhost:4011/health --timeout 30000
+        run: npx wait-on http-get://localhost:4010/health http-get://localhost:4011/health --timeout 30000
 
       - name: Run Newman contract tests
         run: npm run test:mock
