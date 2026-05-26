@@ -204,6 +204,10 @@ http://localhost:4011
 
 ---
 
+Cập nhật hiển thị thời gian: 2026-05-26
+
+---
+
 ## 7. Lưu ý về Prism Mock Server
 
 Prism Mock Server giúp kiểm thử sớm khi service thật chưa hoàn thiện.
